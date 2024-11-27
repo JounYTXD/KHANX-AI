@@ -87,7 +87,7 @@ let dec = `
 ┃◆ .𝙼𝚘𝚟𝚒𝚎
 ╰━━━━━━━━━━━━⪼
 https://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ Jᴀᴡᴀᴅ TᴇᴄʜX 🇵🇰
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ Jᴀᴡᴀᴅ TᴇᴄʜX
 `
 await conn.sendMessage(from,{image:{url: `https://files.catbox.moe/hzagwo.jpg`},caption:dec},{quoted:mek});
 
