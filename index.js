@@ -70,7 +70,7 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `*Hello there KHANX-AI User! \ud83d\udc4b\ud83c\udffb* \n\n> KHANX-Ai is a beta version of KHAN-AI also it provide enhanced functionality to users\n\n *Thanks for using KHANX-AI \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/JawadYTX/KHANX-AI\n\n> Powered By JawadTechX \ud83c\uddf5\ud83c\uddf0`;
+let up = `*Hello there KHANX-AI User! \ud83d\udc4b\ud83c\udffb* \n\n> KHANX-Ai is a lite version of KHAN-AI also it provide enhanced functionality to users\n\n *Thanks for using KHANX-AI \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/JawadYTX/KHANX-AI\n\n> Powered By JawadTechX \ud83c\uddf5\ud83c\uddf0`;
 
 conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/hzagwo.jpg` }, caption: up })
 }
@@ -134,20 +134,14 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
- 
-//===================================work-type========================================= 
-if(!isOwner && config.MODE === "private") return
-if(!isOwner && isGroup && config.MODE === "inbox") return
-if(!isOwner && !isGroup && config.MODE === "groups") return
-
-//=============ownerreact team============
-
+            
+        
+//================ownerreact==============
 if(senderNumber.includes("923146190772")){
 if(isReact) return
 m.react("👑")
 }
-
-//=============public react=============//
+//===========reactions===============//
 // Auto React 
 if (!isReact && senderNumber !== botNumber) {
     if (config.AUTO_REACT === 'true') {
@@ -165,10 +159,8 @@ if (!isReact && senderNumber === botNumber) {
         const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomOwnerReaction);
     }
-}
-        
-//============================HRTPACK============================       
-        //=======HRT React 
+}        
+//===============HRTPACK===========       
 if (!isReact && senderNumber !== botNumber) {
     if (config.HEART_REACT === 'true') {
             const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
@@ -183,12 +175,16 @@ if (!isReact && senderNumber === botNumber) {
            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
         m.react(randomReaction);
     }
-}   
-
-//====================auto-voice============================
+}                               
+ 
+//===================================work-type========================================= 
+if(!isOwner && config.MODE === "private") return
+if(!isOwner && isGroup && config.MODE === "inbox") return
+if(!isOwner && !isGroup && config.MODE === "groups") return
+//====================react============================
 
 if (config.AUTO_VOICE === 'true') {
-const url = 'https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/main/MSG/BALOCH-AI'
+const url = 'https://raw.githubusercontent.com/DarkYasiyaofc/VOICE/main/Voice-Raw/FROZEN-V2'
 let { data } = await axios.get(url)
 for (vr in data){
 if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   
