@@ -21,7 +21,7 @@ MONGODB: process.env.MONGODB || "mongodb+srv://kulathungaasitha319:yjHB0DvFfStNf
 // add your mongodb
 AUTO_REACT: process.env.AUTO_REACT || "true",
 // make this true or false for auto react on all msgs
-ANTI_BAD: process.env.ANTI_BAD || "false",
+ANTI_BAD: process.env.ANTI_BAD || "true",
 // false or true for anti bad words
 ANTI_BAD_WORDS: (process.env.ANTI_BAD_WORDS || "null,sax").split(','),
 // add custom antu bad words 
