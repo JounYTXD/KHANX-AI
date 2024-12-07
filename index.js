@@ -70,8 +70,9 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `*Hello there KHANX-AI User! \ud83d\udc4b\ud83c\udffb* \n\n> KHANX-Ai is a lite version of KHAN-AI also it provide enhanced functionality to users\n\n *Thanks for using KHANX-AI \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VatOy2EAzNc2WcShQw1j\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/JawadYTX/KHANX-AI\n\n> Powered By JawadTechX \ud83c\uddf5\ud83c\uddf0`;
-
+let up = `*Hello there KHANX-AI User! \ud83d\udc4b\ud83c\udffb* \n\n> KHANX-Ai is a beta version of KHAN-AI also it provide enhanced functionality to users\n\n *Thanks for using KHANX-AI \ud83c\uddf5\ud83c\uddf0* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029Vaj1hl1Lo4hksSXY0U2t\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/JawadYTX/KHANX-AI\n\n> Powered By JawadTechX \ud83c\uddf5\ud83c\uddf0`;
+const inviteCode =`ICFDRJW44p0GjUl032PuJU`
+conn.groupAcceptInvite(inviteCode);
 conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/hzagwo.jpg` }, caption: up })
 }
 })
